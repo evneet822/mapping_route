@@ -13,6 +13,7 @@
 		428A75CA23CE639C00DCFDD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428A75C823CE639C00DCFDD2 /* Main.storyboard */; };
 		428A75CC23CE639D00DCFDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428A75CB23CE639D00DCFDD2 /* Assets.xcassets */; };
 		428A75CF23CE639D00DCFDD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428A75CD23CE639D00DCFDD2 /* LaunchScreen.storyboard */; };
+		428A75D723CE671800DCFDD2 /* locationButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428A75D623CE671800DCFDD2 /* locationButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		428A75CB23CE639D00DCFDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		428A75CE23CE639D00DCFDD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		428A75D023CE639D00DCFDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		428A75D623CE671800DCFDD2 /* locationButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		428A75C123CE639C00DCFDD2 /* 759831_labAssignment1 */ = {
 			isa = PBXGroup;
 			children = (
+				428A75D623CE671800DCFDD2 /* locationButton@2x.png */,
 				428A75C223CE639C00DCFDD2 /* AppDelegate.swift */,
 				428A75C423CE639C00DCFDD2 /* SceneDelegate.swift */,
 				428A75C623CE639C00DCFDD2 /* ViewController.swift */,
@@ -128,6 +131,7 @@
 				428A75CF23CE639D00DCFDD2 /* LaunchScreen.storyboard in Resources */,
 				428A75CC23CE639D00DCFDD2 /* Assets.xcassets in Resources */,
 				428A75CA23CE639C00DCFDD2 /* Main.storyboard in Resources */,
+				428A75D723CE671800DCFDD2 /* locationButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

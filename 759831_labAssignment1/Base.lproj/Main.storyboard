@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_59831_labAssignment1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5S-56-1d3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlY-b6-a8C">
+                                <rect key="frame" x="187" y="533" width="188" height="134"/>
+                                <state key="normal" title="Button" image="locationButton.png"/>
+                                <connections>
+                                    <action selector="showDirectionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qsp-cF-U4S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-6j-mVm" userLabel="zoomIn">
+                                <rect key="frame" x="16" y="617" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Ikg-4m-aVc"/>
+                                    <constraint firstAttribute="height" constant="40" id="fta-iR-ley"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" image="plus.square.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomIN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHA-ug-mJ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRw-yI-Aam" userLabel="zoomOut">
+                                <rect key="frame" x="56" y="617" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="PX5-pm-qWI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="b7F-HX-gBE"/>
+                                    <constraint firstAttribute="width" constant="40" id="bNp-fK-s1f"/>
+                                    <constraint firstAttribute="height" constant="40" id="gaD-0o-SHu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" image="minus.square.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomOUT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5HP-E4-ag1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x5f-6j-mVm" secondAttribute="bottom" constant="10" id="A88-Je-HfS"/>
+                            <constraint firstItem="x5f-6j-mVm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="An3-t3-HPZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZlY-b6-a8C" secondAttribute="bottom" id="Hyh-HE-Rp1"/>
+                            <constraint firstItem="eRw-yI-Aam" firstAttribute="leading" secondItem="x5f-6j-mVm" secondAttribute="trailing" id="LKT-SP-pUy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k5S-56-1d3" secondAttribute="bottom" id="R2m-Ep-jZK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5S-56-1d3" secondAttribute="trailing" id="afP-UE-PQR"/>
+                            <constraint firstItem="k5S-56-1d3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f5d-eX-ud7"/>
+                            <constraint firstItem="k5S-56-1d3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rX1-K8-iyW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eRw-yI-Aam" secondAttribute="bottom" constant="10" id="uLJ-Ww-6IO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZlY-b6-a8C" secondAttribute="trailing" id="vBh-7q-pm5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="k5S-56-1d3" id="wms-eK-2X7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="locationButton.png" width="67" height="67"/>
+        <image name="minus.square.fill" catalog="system" width="64" height="56"/>
+        <image name="plus.square.fill" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
